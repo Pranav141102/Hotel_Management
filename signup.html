@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="stylesheet" media="screen and (max-width: 1369px)" href="styles/signup.css">
+</head>
+
+<body>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <div class="frontpage">
+        <div class="navbar">
+            <ul id="navbarmain">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html#about">About</a>
+                </li>
+                <li>
+                    <a href="index.html#kitchen">Restaurant</a>
+                </li>
+                <li>
+                    <a href="index.html#rooms">Rooms</a>
+                </li>
+                <li>
+                    <a href="/contact.html">Contact Us</a>
+                </li>
+                <li>
+                    <a href="/login.html">SignUp</a>
+                </li>
+            </ul>
+            <div class="social">
+                <ul>
+                    <li>
+                        <img src="socials/fb.png" alt="" id="fb">
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com/" target="_blank">
+                            <img src="socials/ig.png" alt="" id="ig">
+                        </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/" target="_blank">
+                            <img src="socials/lnkd.png" alt="" id="lnkd">
+                        </a>
+                    </li>
+                    <li> <a href="https://github.com/" target="_blank">
+                            <img src="socials/git.png" alt="" id="git">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="main_conatiner">
+            <section class="order_section">
+                <div class="left-section">
+                    <div class="login-form">
+                        <h2>Login</h2>
+                        <form>
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+
+                            <button type="submit">Login</button>
+                        </form>
+                        <div class="form-footer">
+                            <p>Don't have an account? <a href="/login.html">SignUp</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <script>
+            const select = document.querySelectorAll('.selectBtn');
+            const option = document.querySelectorAll('.option');
+            let index = 1;
+
+            select.forEach((a) => {
+                a.addEventListener('click', (b) => {
+                    const next = b.target.nextElementSibling;
+                    next.classList.toggle('toggle');
+                    next.style.zIndex = index++;
+                });
+            });
+            option.forEach((a) => {
+                a.addEventListener('click', (b) => {
+                    b.target.parentElement.classList.remove('toggle');
+
+                    const parent = b.target.closest('.select').children[0];
+                    parent.setAttribute('data-type', b.target.getAttribute('data-type'));
+                    parent.innerText = b.target.innerText;
+                });
+            });
+
+            // changes
+            function closeOffer() {
+                var offerDiv = document.getElementById('offer');
+
+                var offerHeight = offerDiv.offsetHeight;
+
+                offerDiv.style.height = '0';
+                offerDiv.style.overflow = 'hidden';
+                offerDiv.style.opacity = '0';
+
+                var contentAfterOffer = document.querySelector('.content-after-offer');
+                if (contentAfterOffer) {
+                    contentAfterOffer.style.marginTop = '-' + offerHeight + 'px';
+                }
+
+                setTimeout(function () {
+                    offerDiv.style.display = 'none';
+                }, 500);
+            }
+
+        </script>
+
+</body>
+
+</html>

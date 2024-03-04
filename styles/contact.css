@@ -1,0 +1,424 @@
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-out;
+}
+
+body {
+  display: grid;
+  margin: 0;
+  height: 100%;
+  background-color: burlywood;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 7px 75px;
+  background-color: #8d0003;
+  color: whitesmoke;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  color: #8d0003;
+  font-weight: bold;
+}
+
+.frontpage {
+  position: relative;
+  background-size: cover;
+}
+
+.frontpage::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+/*Frontpage Navbar  */
+
+#logo1 {
+  display: flex;
+  position: absolute;
+  height: 100px;
+  left: 1.25rem;
+  padding-top: 20px;
+}
+
+.navbar {
+  padding-top: 14.5px;
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure navbar stays on top of other content */
+  width: 100%; /* Occupy full width */
+  display: flex;
+  justify-content: center; /* Align items to the center */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  padding: 12px;
+}
+
+/* Sticky navbar */
+ul#navbarmain {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul#navbarmain li {
+  float: left;
+}
+
+ul#navbarmain li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar #navbarmain li a {
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.navbar #navbarmain li a:hover {
+  color: #8d0003;
+  font-size: 17px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+}
+
+.social {
+  display: inline-block;
+  position: absolute;
+  right: 1.25rem;
+}
+
+.social img {
+  margin-right: 8px;
+  margin-left: 4px;
+}
+
+.social li {
+  height: 30px;
+}
+
+.social #fb,
+#ig {
+  height: 22px;
+  opacity: 0.75;
+  margin-top: 3px;
+}
+
+.social #lnkd {
+  height: 24px;
+  opacity: 0.75;
+  margin-top: 3px;
+}
+
+.social #git {
+  height: 35px;
+  padding-bottom: 5px;
+  opacity: 0.75;
+}
+
+a img:hover {
+  cursor: pointer;
+  filter: invert();
+}
+
+/* contact Us */
+
+.contdata {
+  position: relative;
+}
+
+.contdata::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.contact #cintro {
+  text-align: center;
+  font-size: 55px;
+  margin: 18px;
+}
+
+.contact #csum1,
+#csum2 {
+  text-align: center;
+  font-size: 18px;
+  margin: 18px;
+  color: #8d0003;
+}
+
+.contact #csum2 {
+  font-size: 15px;
+  padding-bottom: 12px;
+}
+
+.contdata {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.contdata #form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 22px;
+  margin-top: 52px;
+}
+
+form input {
+  margin: 4px;
+  padding: 4px;
+}
+
+.cdesc {
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 100px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.contdata .btn {
+  display: flex;
+  justify-content: center;
+}
+
+.contdata form div {
+  padding: 4.5px;
+}
+
+/*Frontpage Navbar  */
+
+#logo1 {
+  display: flex;
+  position: absolute;
+  height: 100px;
+  left: 1.25rem;
+}
+
+.navbar {
+  padding-top: 14.5px;
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure navbar stays on top of other content */
+  width: 100%; /* Occupy full width */
+  display: flex;
+  justify-content: center; /* Align items to the center */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  padding: 12px;
+}
+
+/* Sticky navbar */
+ul#navbarmain {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul#navbarmain li {
+  float: left;
+}
+
+ul#navbarmain li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar #navbarmain li a {
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.navbar #navbarmain li a:hover {
+  color: #8d0003;
+  font-size: 17px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+}
+
+.social {
+  display: inline-block;
+  position: absolute;
+  right: 1.25rem;
+}
+
+.social img {
+  margin-right: 8px;
+  margin-left: 4px;
+}
+
+.social li {
+  height: 30px;
+}
+
+.social #fb,
+#ig {
+  height: 22px;
+  opacity: 0.75;
+  margin-top: 3px;
+}
+
+.social #lnkd {
+  height: 24px;
+  opacity: 0.75;
+  margin-top: 3px;
+}
+
+.social #git {
+  height: 35px;
+  padding-bottom: 5px;
+  opacity: 0.75;
+}
+
+a img:hover {
+  cursor: pointer;
+  filter: invert();
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  display: grid;
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
+.main_container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.order_section {
+  width: 100%;
+  background-color: burlywood;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  /* align-items: center; */
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+}
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555555;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #111563;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #348238;
+  transition-delay: 0.3s;
+}
+
+.login-form .form-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #777777;
+}
+
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #777777;
+}
+
+.form-footer a {
+  color: purple;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.form-footer a:hover {
+  color: #1c782a; /* Change to the desired color on hover */
+}
+
+.item {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
